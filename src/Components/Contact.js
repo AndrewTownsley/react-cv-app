@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState} from 'react';
 
-const Contact = () {
+const Contact = () => {
+  const [textInput, setTextInput] = useState('');
+
+const userInputHandler = (e) => {
+  setTextInput(e.target.value);
+}
+
   return(
-    <section>
-    <input type="text" />
-    </section>
+    <div>
+      <h2>Basic Contact Information</h2>
+      <h3>Enter Your Name</h3>
+      <input type="text" onChange={userInputHandler} />
+      <p>{textInput}</p>
+    </div>
   )
 }
+
+export default Contact;
