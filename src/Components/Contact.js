@@ -11,8 +11,9 @@ const userInputHandler = (e) => {
     <div>
       <h2>Basic Contact Information</h2>
       <h3>Enter Your Name</h3>
-      <input type="text" onChange={userInputHandler} />
+      <input value={textInput} type="text" onChange={userInputHandler} />
       <p>{textInput}</p>
+      <button onClick={() => setTextInput('')}>Reset</button>
     </div>
   )
 }
